@@ -12,12 +12,13 @@
 
 class ventana {
 public:
+    float velocidadball= .6f;
     float xball = 200;
     float yball = 300;
-    float direccionx = .6f;
+    float direccionx = velocidadball;
     float posxBarra = 250;
     float tamanobarrax = 100.f;
-    float direcciony = .6f;
+    float direcciony = velocidadball;
     bool modoprofundo = false;
     void menu();
     sf::RectangleShape barra;

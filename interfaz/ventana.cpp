@@ -39,9 +39,9 @@ void ventana::juego() {
             if (event.type == sf::Event::Closed)
                 window.close();
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-                posxBarra += 4.f;
+                posxBarra += 10.f;
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-                posxBarra -= 4.f;
+                posxBarra -= 10.f;
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::P)){
                 contador -= 1;
                 if (contador == 0){
@@ -69,11 +69,11 @@ void ventana::juego() {
         yball += direcciony;
         xball += direccionx;
         if (xball > 486.f)
-            direccionx = -.6f;
+            direccionx = -velocidadball;
         if (0.f > xball)
-            direccionx = .6f;
+            direccionx = velocidadball;
         if (yball+14 > 450 && xball > posxBarra && posxBarra+100 > xball)
-            direcciony = -.6f;
+            direcciony = -velocidadball;
         if (yball + 14 > 460){
             direccionx = 0;
             direcciony = 0;
@@ -84,7 +84,7 @@ void ventana::juego() {
             perdio = true;
         }
         if (0 >yball )
-            direcciony = .6f;
+            direcciony = velocidadball;
         if (perdio)
             text.setString("Perdiste"),text.setCharacterSize(40),text.setFillColor(sf::Color::Green),text.setPosition(0,350),window.draw(text);
         girabarra();
