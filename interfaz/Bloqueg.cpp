@@ -37,3 +37,12 @@ void Bloqueg::setdestruido(bool destru) {
     destruido = destru;
 
 }
+
+int Bloqueg::getcolor() {
+    return color;
+}
+
+void Bloqueg::setcolor(int col) {
+    color = col;
+
+}

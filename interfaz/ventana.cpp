@@ -9,40 +9,64 @@
 #include "bolas.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <thread>
+#include <iomanip>
+
 bool dibujar = true;
 bool dibujar2 =false;
 
 sf::RenderWindow window(sf::VideoMode(500, 500), "SFML works!");
-
-
-
 void ventana::juego() {
-
-    //sf::CircleShape shape(7.f);
-    //shape.setFillColor(sf::Color::Green);
-    sf::RectangleShape barra(sf::Vector2f(100.f,20.f));
-    bolas bola1;
-
-    grupopelotas[0] = bola1;
-
+    int cronometro = 100;
+    sf::Font font;
+    font.loadFromFile("Minecrafter.ttf");
+    sf::Text text;
+    text.setFont(font);
+    sf::CircleShape shape(7.f);
+    shape.setFillColor(sf::Color::Green);
+    sf::RectangleShape barra2(sf::Vector2f(tamanobarrax,20.f));
+    barra= barra2;
+    //Bolas bola1;
+    //bola1.mover();
+    bool perdio = false;
     while (window.isOpen())
     {
         sf::Event event{};
+        int contador = 1;
         while (window.pollEvent(event))
         {
+
             if (event.type == sf::Event::Closed)
                 window.close();
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
                 posxBarra += 4.f;
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
                 posxBarra -= 4.f;
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::P)){
+                contador -= 1;
+                if (contador == 0){
+                    if (modoprofundo){
+                        shape.setFillColor(sf::Color::Green);
+                        modoprofundo = false;
+                    }
+
+                    else{
+                        shape.setFillColor(sf::Color::Red);
+                        modoprofundo = true;
+                    }
+                }
+
+
+
+
+            }
+
 
         }
 
         window.clear();
-        bola1.mueve(posxBarra);
-        window.draw(grupopelotas[0].shape);
-        /*yball += direcciony;
+
+        yball += direcciony;
         xball += direccionx;
         if (xball > 486.f)
             direccionx = -.6f;
@@ -50,10 +74,22 @@ void ventana::juego() {
             direccionx = .6f;
         if (yball+14 > 450 && xball > posxBarra && posxBarra+100 > xball)
             direcciony = -.6f;
+        if (yball + 14 > 460){
+            direccionx = 0;
+            direcciony = 0;
+            xball = 0;
+            yball = 0;
+            tamanobarrax -= 10;
+            barra.setSize(sf::Vector2f(tamanobarrax,20.f));
+            perdio = true;
+        }
         if (0 >yball )
-            direcciony += .6f;*/
+            direcciony = .6f;
+        if (perdio)
+            text.setString("Perdiste"),text.setCharacterSize(40),text.setFillColor(sf::Color::Green),text.setPosition(0,350),window.draw(text);
+        girabarra();
         //efecto de colision con bloques
-        /*for(int i=0;i<6;i++){
+        for(int i=0;i<6;i++){
             for(int j=0;j<13;j++){
                 if (chocabloque(filas[i][j].getx()+38,
                                 filas[i][j].getx(),
@@ -66,7 +102,14 @@ void ventana::juego() {
                 }
 
             }
-        }*/
+        }
+
+
+        std::string labelpuntos ="Puntos "+ puntos;
+        text.setString(labelpuntos),text.setCharacterSize(20),text.setFillColor(sf::Color::Green),text.setPosition(0,480),window.draw(text);
+
+
+
 
 
 
@@ -83,9 +126,9 @@ void ventana::juego() {
 
         }
 
-        //shape.setPosition(xball,yball);
+        shape.setPosition(xball,yball);
         barra.setPosition(posxBarra,450);
-        //window.draw(shape);
+        window.draw(shape);
         window.draw(barra);
 
         window.display();
@@ -104,10 +147,20 @@ void ventana::dibujabloques() {
         for(int j=0;j<13;j++){
             sf::RectangleShape bloqueh(sf::Vector2f(38.f,20.f));
             bloqueh.setPosition(x,y);
-            bloqueh.setFillColor(sf::Color::Blue);
             Bloqueg bloque;
             bloque.setBloque(bloqueh);
             bloque.setcoords(x,y);
+            bloque.setcolor(2);
+            if (bloque.getcolor() == 1)
+                bloqueh.setFillColor(sf::Color::Blue);
+            if (bloque.getcolor() == 2)
+                bloqueh.setFillColor(sf::Color::Red);
+            if (bloque.getcolor() == 3)
+                bloqueh.setFillColor(sf::Color::Yellow);
+            if (bloque.getcolor() == 4)
+                bloqueh.setFillColor(sf::Color::Magenta);
+
+
 
 
 
@@ -124,40 +177,40 @@ void ventana::dibujabloques() {
 
 }
 
-//bool ventana::chocabloque(int xd, int xi, int ya, int yb ) {
-//xball,xball+14,yball+14,yba+14
+bool ventana::chocabloque(int xd, int xi, int ya, int yb ) {
+    //xball,xball+14,yball+14,yba+14
 
 
-/*if (xd>xball && xball >xi && yb>yball+7 && yball+7>ya){
-    direccionx = direccionx *-1.f;
-    return true;
+    if (xd>xball && xball >xi && yb>yball+7 && yball+7>ya){
+        direccionx = direccionx *-1.f;
+        return true;
+
+    }
+    else
+    if (xd>xball+7 && xball+7 >xi && yb>yball && yball>ya)
+    {
+        direcciony = direcciony *-1.f;
+        return true;
+
+    }
+    else
+    if (xd>xball+7 && xball+7 >xi && yb>yball+14 && yball+14>ya){
+        direcciony = direcciony *-1.f;
+        return true;
+
+
+    }
+    else
+    if (xd>xball+14 && xball+14 >xi && yb>yball+7 && yball+7>ya){
+        direccionx = direccionx *-1.f;
+        return true;
+
+    }
+    else
+        return false;
+
 
 }
-else
-if (xd>xball+7 && xball+7 >xi && yb>yball && yball>ya)
-{
-    direcciony = direcciony *-1.f;
-    return true;
-
-}
-else
-if (xd>xball+7 && xball+7 >xi && yb>yball+14 && yball+14>ya){
-    direcciony = direcciony *-1.f;
-    return true;
-
-
-}
-else
-if (xd>xball+14 && xball+14 >xi && yb>yball+7 && yball+7>ya){
-    direccionx = direccionx *-1.f;
-    return true;
-
-}
-else
-    return false;*/
-
-
-//}
 
 void ventana::dibujabloques2() {
 
@@ -165,9 +218,17 @@ void ventana::dibujabloques2() {
         for(int j=0;j<13;j++){
             sf::RectangleShape bloqueh(sf::Vector2f(38.f,20.f));
             bloqueh.setPosition(filas[i][j].getx(),filas[i][j].gety());
-            bloqueh.setFillColor(sf::Color::Blue);
-            filas[i][j].setBloque(bloqueh);
 
+
+            if (filas[i][j].getcolor() == 1)
+                bloqueh.setFillColor(sf::Color::Blue);
+            if (filas[i][j].getcolor() == 2)
+                bloqueh.setFillColor(sf::Color::Red);
+            if (filas[i][j].getcolor() == 3)
+                bloqueh.setFillColor(sf::Color::Yellow);
+            if (filas[i][j].getcolor() == 4)
+                bloqueh.setFillColor(sf::Color::Magenta);
+            filas[i][j].setBloque(bloqueh);
             window.draw(filas[i][j].getBloque());
 
         }
@@ -204,6 +265,10 @@ void ventana::menu() {
                     esip = true;
                     esnombre = false;
                     espuerto = false;
+                }
+            if (250<mousex && mousex<250+25 && mousey<250+20 && mousey>250)
+                if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                    juego();
                 }
             if (50<mousex && mousex<50+100 && mousey<50+20 && mousey>50)
                 if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
@@ -396,6 +461,7 @@ void ventana::menu() {
 
         window.draw(bloqueh);
         window.draw(botonip);
+
         window.draw(botonpuerto);
         sf::Font font;
         font.loadFromFile("Minecrafter.ttf");
@@ -414,10 +480,50 @@ void ventana::menu() {
         text.setString("Puerto"),text.setCharacterSize(20),text.setFillColor(sf::Color::Green),text.setPosition(50,180-2),window.draw(text);
         text.setString(puerto),text.setCharacterSize(20),text.setFillColor(sf::Color::Green),text.setPosition(50,210),window.draw(text);
 
+        //boton para nombre
+        sf::RectangleShape botonaceptar(sf::Vector2f(100.f,20.f));
+        botonaceptar.setPosition(250,250);
+        if (250<mousex && mousex<250+100 && mousey<250+20 && mousey>250)
+            botonaceptar.setFillColor(sf::Color::Red);
+        else
+            botonaceptar.setFillColor(sf::Color::Blue);
+        window.draw(botonaceptar);
 
 
 
 
         window.display();
     }
+}
+
+void ventana::girabarra() {
+    std::thread girabarra2();
+
+}
+
+void ventana::girabarra2() {
+    barra.setRotation(90);
+    barra.setPosition(posxBarra+50,450);
+
+}
+
+int main()
+{   auto start = std::chrono::system_clock::now();
+    // Some computation here
+    auto end = std::chrono::system_clock::now();
+    bool hi = true;
+    int hola = 0;
+    while(hi){
+        std::chrono::duration<double> elapsed_seconds = end-start;
+        hola = elapsed_seconds.count();
+        if (hola == 1)
+            hi = false;
+    }
+
+    std::time_t end_time = std::chrono::system_clock::to_time_t(end);
+
+    std::cout << "finished computation at " << std::ctime(&end_time)
+              << "elapsed time: " << hola<< "s\n";
+    ventana juego;
+    //juego.juego();
 }

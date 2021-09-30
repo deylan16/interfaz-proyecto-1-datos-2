@@ -14,6 +14,7 @@ public:
     int y= 0;
     bool destruido = true;
     sf::RectangleShape bloque;
+    int color;
 
     void setcoords(int x,int y);
     int getx();
@@ -21,7 +22,10 @@ public:
     bool getdestruido();
     void setdestruido(bool destru);
     void setBloque(sf::RectangleShape bloque2);
+    int getcolor();
+    void setcolor(int col);
     sf::RectangleShape getBloque();
+
 
 
 };
