@@ -266,9 +266,10 @@ void ventana::menu() {
                     esnombre = false;
                     espuerto = false;
                 }
-            if (250<mousex && mousex<250+25 && mousey<250+20 && mousey>250)
+            if (250<mousex && mousex<250+100 && mousey<250+20 && mousey>250)
                 if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                     juego();
+
                 }
             if (50<mousex && mousex<50+100 && mousey<50+20 && mousey>50)
                 if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
@@ -508,7 +509,7 @@ void ventana::girabarra2() {
 }
 
 int main()
-{   auto start = std::chrono::system_clock::now();
+{   /*auto start = std::chrono::system_clock::now();
     // Some computation here
     auto end = std::chrono::system_clock::now();
     bool hi = true;
@@ -523,7 +524,7 @@ int main()
     std::time_t end_time = std::chrono::system_clock::to_time_t(end);
 
     std::cout << "finished computation at " << std::ctime(&end_time)
-              << "elapsed time: " << hola<< "s\n";
+              << "elapsed time: " << hola<< "s\n";*/
     ventana juego;
-    //juego.juego();
+    juego.menu();
 }
