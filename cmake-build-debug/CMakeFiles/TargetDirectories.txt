@@ -1,0 +1,3 @@
+/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/interfaz_proyecto_1_datos_2.dir
