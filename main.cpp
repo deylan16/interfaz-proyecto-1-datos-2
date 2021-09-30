@@ -1,6 +1,7 @@
 #include <iostream>
+#include "interfaz/ventana.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    ventana juego;
+    juego.ventana::juego();
 }

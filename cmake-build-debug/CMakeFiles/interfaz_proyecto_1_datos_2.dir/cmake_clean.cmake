@@ -1,4 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.o"
+  "CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.o"
+  "CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.o"
   "CMakeFiles/interfaz_proyecto_1_datos_2.dir/main.cpp.o"
   "interfaz_proyecto_1_datos_2"
   "interfaz_proyecto_1_datos_2.pdb"

@@ -1,12 +1,12 @@
 //
-// Created by deylan on 23/9/21.
+// Created by deylan on 29/9/21.
 //
 
-#ifndef UNTITLED2_BLOQUEG_H
-#define UNTITLED2_BLOQUEG_H
-
-
 #include <SFML/Graphics/RectangleShape.hpp>
+
+#ifndef INTERFAZ_PROYECTO_1_DATOS_2_BLOQUEG_H
+#define INTERFAZ_PROYECTO_1_DATOS_2_BLOQUEG_H
+
 
 class Bloqueg {
 public:
@@ -25,6 +25,4 @@ public:
 
 
 };
-
-
-#endif //UNTITLED2_BLOQUEG_H
+#endif //INTERFAZ_PROYECTO_1_DATOS_2_BLOQUEG_H

@@ -129,6 +129,78 @@ interfaz_proyecto_1_datos_2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/interfaz_proyecto_1_datos_2.dir/build.make CMakeFiles/interfaz_proyecto_1_datos_2.dir/build
 .PHONY : interfaz_proyecto_1_datos_2/fast
 
+interfaz/Bloqueg.o: interfaz/Bloqueg.cpp.o
+.PHONY : interfaz/Bloqueg.o
+
+# target to build an object file
+interfaz/Bloqueg.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interfaz_proyecto_1_datos_2.dir/build.make CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.o
+.PHONY : interfaz/Bloqueg.cpp.o
+
+interfaz/Bloqueg.i: interfaz/Bloqueg.cpp.i
+.PHONY : interfaz/Bloqueg.i
+
+# target to preprocess a source file
+interfaz/Bloqueg.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interfaz_proyecto_1_datos_2.dir/build.make CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.i
+.PHONY : interfaz/Bloqueg.cpp.i
+
+interfaz/Bloqueg.s: interfaz/Bloqueg.cpp.s
+.PHONY : interfaz/Bloqueg.s
+
+# target to generate assembly for a file
+interfaz/Bloqueg.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interfaz_proyecto_1_datos_2.dir/build.make CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.s
+.PHONY : interfaz/Bloqueg.cpp.s
+
+interfaz/bolas.o: interfaz/bolas.cpp.o
+.PHONY : interfaz/bolas.o
+
+# target to build an object file
+interfaz/bolas.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interfaz_proyecto_1_datos_2.dir/build.make CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.o
+.PHONY : interfaz/bolas.cpp.o
+
+interfaz/bolas.i: interfaz/bolas.cpp.i
+.PHONY : interfaz/bolas.i
+
+# target to preprocess a source file
+interfaz/bolas.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interfaz_proyecto_1_datos_2.dir/build.make CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.i
+.PHONY : interfaz/bolas.cpp.i
+
+interfaz/bolas.s: interfaz/bolas.cpp.s
+.PHONY : interfaz/bolas.s
+
+# target to generate assembly for a file
+interfaz/bolas.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interfaz_proyecto_1_datos_2.dir/build.make CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.s
+.PHONY : interfaz/bolas.cpp.s
+
+interfaz/ventana.o: interfaz/ventana.cpp.o
+.PHONY : interfaz/ventana.o
+
+# target to build an object file
+interfaz/ventana.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interfaz_proyecto_1_datos_2.dir/build.make CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.o
+.PHONY : interfaz/ventana.cpp.o
+
+interfaz/ventana.i: interfaz/ventana.cpp.i
+.PHONY : interfaz/ventana.i
+
+# target to preprocess a source file
+interfaz/ventana.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interfaz_proyecto_1_datos_2.dir/build.make CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.i
+.PHONY : interfaz/ventana.cpp.i
+
+interfaz/ventana.s: interfaz/ventana.cpp.s
+.PHONY : interfaz/ventana.s
+
+# target to generate assembly for a file
+interfaz/ventana.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/interfaz_proyecto_1_datos_2.dir/build.make CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.s
+.PHONY : interfaz/ventana.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... interfaz_proyecto_1_datos_2"
+	@echo "... interfaz/Bloqueg.o"
+	@echo "... interfaz/Bloqueg.i"
+	@echo "... interfaz/Bloqueg.s"
+	@echo "... interfaz/bolas.o"
+	@echo "... interfaz/bolas.i"
+	@echo "... interfaz/bolas.s"
+	@echo "... interfaz/ventana.o"
+	@echo "... interfaz/ventana.i"
+	@echo "... interfaz/ventana.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

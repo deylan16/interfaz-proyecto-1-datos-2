@@ -8,6 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/Bloqueg.cpp" "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.o"
+  "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/bolas.cpp" "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.o"
+  "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/ventana.cpp" "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.o"
   "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/main.cpp" "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/interfaz_proyecto_1_datos_2.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

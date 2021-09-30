@@ -79,17 +79,62 @@ CMakeFiles/interfaz_proyecto_1_datos_2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/interfaz_proyecto_1_datos_2.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deylan/Escritorio/interfaz-proyecto-1-datos-2/main.cpp -o CMakeFiles/interfaz_proyecto_1_datos_2.dir/main.cpp.s
 
+CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.o: CMakeFiles/interfaz_proyecto_1_datos_2.dir/flags.make
+CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.o: ../interfaz/bolas.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.o -c /home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/bolas.cpp
+
+CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/bolas.cpp > CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.i
+
+CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/bolas.cpp -o CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.s
+
+CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.o: CMakeFiles/interfaz_proyecto_1_datos_2.dir/flags.make
+CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.o: ../interfaz/Bloqueg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.o -c /home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/Bloqueg.cpp
+
+CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/Bloqueg.cpp > CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.i
+
+CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/Bloqueg.cpp -o CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.s
+
+CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.o: CMakeFiles/interfaz_proyecto_1_datos_2.dir/flags.make
+CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.o: ../interfaz/ventana.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.o -c /home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/ventana.cpp
+
+CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/ventana.cpp > CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.i
+
+CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/ventana.cpp -o CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.s
+
 # Object files for target interfaz_proyecto_1_datos_2
 interfaz_proyecto_1_datos_2_OBJECTS = \
-"CMakeFiles/interfaz_proyecto_1_datos_2.dir/main.cpp.o"
+"CMakeFiles/interfaz_proyecto_1_datos_2.dir/main.cpp.o" \
+"CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.o" \
+"CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.o" \
+"CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.o"
 
 # External object files for target interfaz_proyecto_1_datos_2
 interfaz_proyecto_1_datos_2_EXTERNAL_OBJECTS =
 
 interfaz_proyecto_1_datos_2: CMakeFiles/interfaz_proyecto_1_datos_2.dir/main.cpp.o
+interfaz_proyecto_1_datos_2: CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.o
+interfaz_proyecto_1_datos_2: CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.o
+interfaz_proyecto_1_datos_2: CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.o
 interfaz_proyecto_1_datos_2: CMakeFiles/interfaz_proyecto_1_datos_2.dir/build.make
 interfaz_proyecto_1_datos_2: CMakeFiles/interfaz_proyecto_1_datos_2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable interfaz_proyecto_1_datos_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable interfaz_proyecto_1_datos_2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/interfaz_proyecto_1_datos_2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

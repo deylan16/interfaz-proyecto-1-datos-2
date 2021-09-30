@@ -1,13 +1,14 @@
 //
-// Created by deylan on 21/9/21.
+// Created by deylan on 29/9/21.
 //
 
 #include "ventana.h"
+
 #include "Bloqueg.h"
 #include "Bloqueg.cpp"
+#include "bolas.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include <thread>
 bool dibujar = true;
 bool dibujar2 =false;
 
@@ -17,10 +18,12 @@ sf::RenderWindow window(sf::VideoMode(500, 500), "SFML works!");
 
 void ventana::juego() {
 
-    sf::CircleShape shape(7.f);
-    shape.setFillColor(sf::Color::Green);
+    //sf::CircleShape shape(7.f);
+    //shape.setFillColor(sf::Color::Green);
     sf::RectangleShape barra(sf::Vector2f(100.f,20.f));
+    bolas bola1;
 
+    grupopelotas[0] = bola1;
 
     while (window.isOpen())
     {
@@ -37,8 +40,9 @@ void ventana::juego() {
         }
 
         window.clear();
-
-        yball += direcciony;
+        bola1.mueve(posxBarra);
+        window.draw(grupopelotas[0].shape);
+        /*yball += direcciony;
         xball += direccionx;
         if (xball > 486.f)
             direccionx = -.6f;
@@ -47,9 +51,9 @@ void ventana::juego() {
         if (yball+14 > 450 && xball > posxBarra && posxBarra+100 > xball)
             direcciony = -.6f;
         if (0 >yball )
-            direcciony += .6f;
+            direcciony += .6f;*/
         //efecto de colision con bloques
-        for(int i=0;i<6;i++){
+        /*for(int i=0;i<6;i++){
             for(int j=0;j<13;j++){
                 if (chocabloque(filas[i][j].getx()+38,
                                 filas[i][j].getx(),
@@ -61,8 +65,8 @@ void ventana::juego() {
 
                 }
 
-                }
             }
+        }*/
 
 
 
@@ -79,9 +83,9 @@ void ventana::juego() {
 
         }
 
-        shape.setPosition(xball,yball);
+        //shape.setPosition(xball,yball);
         barra.setPosition(posxBarra,450);
-        window.draw(shape);
+        //window.draw(shape);
         window.draw(barra);
 
         window.display();
@@ -120,54 +124,54 @@ void ventana::dibujabloques() {
 
 }
 
-bool ventana::chocabloque(int xd, int xi, int ya, int yb ) {
-    //xball,xball+14,yball+14,yba+14
+//bool ventana::chocabloque(int xd, int xi, int ya, int yb ) {
+//xball,xball+14,yball+14,yba+14
 
 
-    if (xd>xball && xball >xi && yb>yball+7 && yball+7>ya){
-        direccionx = direccionx *-1.f;
-        return true;
+/*if (xd>xball && xball >xi && yb>yball+7 && yball+7>ya){
+    direccionx = direccionx *-1.f;
+    return true;
 
-    }
-    else
-        if (xd>xball+7 && xball+7 >xi && yb>yball && yball>ya)
-        {
-            direcciony = direcciony *-1.f;
-            return true;
+}
+else
+if (xd>xball+7 && xball+7 >xi && yb>yball && yball>ya)
+{
+    direcciony = direcciony *-1.f;
+    return true;
 
-        }
-        else
-            if (xd>xball+7 && xball+7 >xi && yb>yball+14 && yball+14>ya){
-                direcciony = direcciony *-1.f;
-                return true;
-
-
-            }
-            else
-                if (xd>xball+14 && xball+14 >xi && yb>yball+7 && yball+7>ya){
-                    direccionx = direccionx *-1.f;
-                    return true;
-
-                }
-                else
-                    return false;
+}
+else
+if (xd>xball+7 && xball+7 >xi && yb>yball+14 && yball+14>ya){
+    direcciony = direcciony *-1.f;
+    return true;
 
 
 }
+else
+if (xd>xball+14 && xball+14 >xi && yb>yball+7 && yball+7>ya){
+    direccionx = direccionx *-1.f;
+    return true;
+
+}
+else
+    return false;*/
+
+
+//}
 
 void ventana::dibujabloques2() {
 
-        for(int i=0;i<6;i++){
-            for(int j=0;j<13;j++){
-                sf::RectangleShape bloqueh(sf::Vector2f(38.f,20.f));
-                bloqueh.setPosition(filas[i][j].getx(),filas[i][j].gety());
-                bloqueh.setFillColor(sf::Color::Blue);
-                filas[i][j].setBloque(bloqueh);
+    for(int i=0;i<6;i++){
+        for(int j=0;j<13;j++){
+            sf::RectangleShape bloqueh(sf::Vector2f(38.f,20.f));
+            bloqueh.setPosition(filas[i][j].getx(),filas[i][j].gety());
+            bloqueh.setFillColor(sf::Color::Blue);
+            filas[i][j].setBloque(bloqueh);
 
-                window.draw(filas[i][j].getBloque());
+            window.draw(filas[i][j].getBloque());
 
         }
-            //dibujar2 = false;
+        //dibujar2 = false;
     }
 }
 
@@ -416,10 +420,4 @@ void ventana::menu() {
 
         window.display();
     }
-}
-
-int main()
-{
-    ventana juego;
-    juego.juego();
 }

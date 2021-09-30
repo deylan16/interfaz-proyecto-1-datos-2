@@ -82,6 +82,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/Bloqueg.cpp">
+			<Option target="interfaz_proyecto_1_datos_2"/>
+		</Unit>
+		<Unit filename="/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/Bloqueg.h">
+			<Option target="interfaz_proyecto_1_datos_2"/>
+		</Unit>
+		<Unit filename="/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/bolas.cpp">
+			<Option target="interfaz_proyecto_1_datos_2"/>
+		</Unit>
+		<Unit filename="/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/bolas.h">
+			<Option target="interfaz_proyecto_1_datos_2"/>
+		</Unit>
+		<Unit filename="/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/ventana.cpp">
+			<Option target="interfaz_proyecto_1_datos_2"/>
+		</Unit>
+		<Unit filename="/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/ventana.h">
+			<Option target="interfaz_proyecto_1_datos_2"/>
+		</Unit>
 		<Unit filename="/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/main.cpp">
 			<Option target="interfaz_proyecto_1_datos_2"/>
 		</Unit>
