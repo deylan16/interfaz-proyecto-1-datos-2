@@ -42,14 +42,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
-    <configuration name="interfaz_proyecto_1_datos_2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="interfaz_proyecto_1_datos_2" TARGET_NAME="interfaz_proyecto_1_datos_2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="interfaz_proyecto_1_datos_2" RUN_TARGET_NAME="interfaz_proyecto_1_datos_2">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="interfaz_proyecto_1_datos_2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="interfaz_proyecto_1_datos_2" TARGET_NAME="interfaz_proyecto_1_datos_2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="interfaz_proyecto_1_datos_2" RUN_TARGET_NAME="interfaz_proyecto_1_datos_2">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -68,7 +68,8 @@
       <workItem from="1633005503794" duration="169000" />
       <workItem from="1633021604170" duration="1402000" />
       <workItem from="1633023722258" duration="1333000" />
-      <workItem from="1633025622043" duration="1306000" />
+      <workItem from="1633025622043" duration="2112000" />
+      <workItem from="1633028299359" duration="5310000" />
     </task>
     <servers />
   </component>

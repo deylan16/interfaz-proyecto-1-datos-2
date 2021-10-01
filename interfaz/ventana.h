@@ -13,14 +13,18 @@
 class ventana {
 public:
     float velocidadball= .6f;
-    float xball = 200;
-    float yball = 300;
+    float xball = 0;
+    float yball = 450;
     float direccionx = velocidadball;
     float posxBarra = 250;
     float tamanobarrax = 100.f;
-    float direcciony = velocidadball;
+    float direcciony = 0;
     bool modoprofundo = false;
     void menu();
+    int vidaball = 3;
+    int gradobarra = 0;
+    void colisionbarra();
+    bool barra90 = false;
     sf::RectangleShape barra;
     std::string puntos =  "0";
     Bloqueg filas[6][13];

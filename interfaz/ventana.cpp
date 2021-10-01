@@ -17,7 +17,8 @@ bool dibujar2 =false;
 
 sf::RenderWindow window(sf::VideoMode(500, 500), "SFML works!");
 void ventana::juego() {
-    int cronometro = 100;
+
+    int cronometro = 200;
     sf::Font font;
     font.loadFromFile("Minecrafter.ttf");
     sf::Text text;
@@ -44,6 +45,7 @@ void ventana::juego() {
                 posxBarra -= 10.f;
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::P)){
                 contador -= 1;
+                girabarra();
                 if (contador == 0){
                     if (modoprofundo){
                         shape.setFillColor(sf::Color::Green);
@@ -55,6 +57,11 @@ void ventana::juego() {
                         modoprofundo = true;
                     }
                 }
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::N)){
+                    std::cout<<"ghd";
+                    barra90 = true;
+                }
+
 
 
 
@@ -72,22 +79,38 @@ void ventana::juego() {
             direccionx = -velocidadball;
         if (0.f > xball)
             direccionx = velocidadball;
-        if (yball+14 > 450 && xball > posxBarra && posxBarra+100 > xball)
-            direcciony = -velocidadball;
-        if (yball + 14 > 460){
-            direccionx = 0;
-            direcciony = 0;
-            xball = 0;
-            yball = 0;
-            tamanobarrax -= 10;
-            barra.setSize(sf::Vector2f(tamanobarrax,20.f));
-            perdio = true;
+        colisionbarra();
+
+        if (yball + 14 > 500){
+            if (vidaball == 0){
+                direccionx = 0;
+                direcciony = 0;
+                xball = -30;
+                yball = -30;
+                tamanobarrax -= 10;
+                barra.setSize(sf::Vector2f(tamanobarrax,20.f));
+                perdio = true;
+
+            }
+            else
+            {
+                direccionx = .6f;
+                direcciony = -.6f;
+                xball = posxBarra+50;
+                yball = 440;
+                tamanobarrax -= 10;
+                barra.setSize(sf::Vector2f(tamanobarrax,20.f));
+                vidaball -=1;
+
+
+            }
+
         }
         if (0 >yball )
             direcciony = velocidadball;
         if (perdio)
             text.setString("Perdiste"),text.setCharacterSize(40),text.setFillColor(sf::Color::Green),text.setPosition(0,350),window.draw(text);
-        girabarra();
+
         //efecto de colision con bloques
         for(int i=0;i<6;i++){
             for(int j=0;j<13;j++){
@@ -112,9 +135,37 @@ void ventana::juego() {
 
 
 
+        barra.setPosition(posxBarra,450);
 
+        if (barra90){
 
+            cronometro -= 1;
+            if (cronometro > 100){
+                barra.setRotation(120);
+                posxBarra = posxBarra;
+                gradobarra = 120;
+                barra.setPosition(posxBarra+100-10,425);
+            }
+            if (cronometro <= 100 && cronometro >= 0){
+                barra.setRotation(90);
+                posxBarra = posxBarra;
+                gradobarra = 90;
+                barra.setPosition(posxBarra+(tamanobarrax/2)+10,450-(tamanobarrax/2)+10);
+            }
+            if (cronometro <= 0 && cronometro >= -100){
+                barra.setRotation(40);
+                posxBarra = posxBarra;
+                gradobarra = 40;
+                barra.setPosition(posxBarra+10,425);
+            }
+            if (cronometro <= -100){
+                barra.setRotation(0);
+                cronometro = 200;
+                barra90 = false;
+                gradobarra = 0;
+            }
 
+        }
         if (dibujar){
             dibujabloques();
 
@@ -127,7 +178,7 @@ void ventana::juego() {
         }
 
         shape.setPosition(xball,yball);
-        barra.setPosition(posxBarra,450);
+
         window.draw(shape);
         window.draw(barra);
 
@@ -391,6 +442,50 @@ void ventana::menu() {
                     entrada.append("z");
                     contadorborrar = contadorborrar -1;
                 }
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num0) ){
+                    entrada.append("0");
+                    contadorborrar = contadorborrar -1;
+                }
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1) ){
+                    entrada.append("1");
+                    contadorborrar = contadorborrar -1;
+                }
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2) ){
+                    entrada.append("2");
+                    contadorborrar = contadorborrar -1;
+                }
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3) ){
+                    entrada.append("3");
+                    contadorborrar = contadorborrar -1;
+                }
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num4) ){
+                    entrada.append("4");
+                    contadorborrar = contadorborrar -1;
+                }
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num5) ){
+                    entrada.append("5");
+                    contadorborrar = contadorborrar -1;
+                }
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num6) ){
+                    entrada.append("6");
+                    contadorborrar = contadorborrar -1;
+                }
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num7) ){
+                    entrada.append("7");
+                    contadorborrar = contadorborrar -1;
+                }
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num8) ){
+                    entrada.append("8");
+                    contadorborrar = contadorborrar -1;
+                }
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num9) ){
+                    entrada.append("9");
+                    contadorborrar = contadorborrar -1;
+                }
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Comma) ){
+                    entrada.append(".");
+                    contadorborrar = contadorborrar -1;
+                }
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace) ){
                     if (contadorborrar2 == 0){
                         if (esip){
@@ -498,13 +593,29 @@ void ventana::menu() {
 }
 
 void ventana::girabarra() {
-    std::thread girabarra2();
+    barra90 = true;
 
 }
 
 void ventana::girabarra2() {
-    barra.setRotation(90);
-    barra.setPosition(posxBarra+50,450);
+
+
+}
+
+void ventana::colisionbarra() {
+    if (gradobarra == 0){
+        if (yball+14 > 450 && yball+14 < 460 && xball > posxBarra && posxBarra+tamanobarrax> xball)
+            direcciony = -velocidadball;
+        else{
+            if (yball+7 > 450 && yball+7 < 470 && posxBarra+tamanobarrax > xball && posxBarra+tamanobarrax-10 < xball)
+                direccionx *= -1.f;
+            else{
+                if (yball+7 > 450 && yball+7 < 470 && posxBarra < xball+14 && posxBarra+tamanobarrax+10 > xball+14)
+                    direccionx *= -1.f;
+            }
+        }
+
+    }
 
 }
 
