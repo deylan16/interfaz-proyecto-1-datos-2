@@ -6,7 +6,7 @@
 
 #include "Bloqueg.h"
 #include "Bloqueg.cpp"
-#include "bolas.h"
+
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <thread>

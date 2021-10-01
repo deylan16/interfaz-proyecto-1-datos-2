@@ -8,7 +8,7 @@
 
 #include <string>
 #include "Bloqueg.h"
-#include "bolas.h"
+
 
 class ventana {
 public:
