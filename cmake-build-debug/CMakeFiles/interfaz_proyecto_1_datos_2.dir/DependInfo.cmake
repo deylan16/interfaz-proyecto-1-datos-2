@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/Bloqueg.cpp" "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.o"
-  "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/bolas.cpp" "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.o"
-  "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/interfaz/ventana.cpp" "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.o"
-  "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/main.cpp" "/home/deylan/Escritorio/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/interfaz_proyecto_1_datos_2.dir/main.cpp.o"
+  "C:/Users/Lenovo/CLionProjects/interfaz-proyecto-1-datos-2/interfaz/Bloqueg.cpp" "C:/Users/Lenovo/CLionProjects/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.obj"
+  "C:/Users/Lenovo/CLionProjects/interfaz-proyecto-1-datos-2/interfaz/bolas.cpp" "C:/Users/Lenovo/CLionProjects/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.obj"
+  "C:/Users/Lenovo/CLionProjects/interfaz-proyecto-1-datos-2/interfaz/ventana.cpp" "C:/Users/Lenovo/CLionProjects/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.obj"
+  "C:/Users/Lenovo/CLionProjects/interfaz-proyecto-1-datos-2/main.cpp" "C:/Users/Lenovo/CLionProjects/interfaz-proyecto-1-datos-2/cmake-build-debug/CMakeFiles/interfaz_proyecto_1_datos_2.dir/main.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.o"
-  "CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.o"
-  "CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.o"
-  "CMakeFiles/interfaz_proyecto_1_datos_2.dir/main.cpp.o"
-  "interfaz_proyecto_1_datos_2"
+  "CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/Bloqueg.cpp.obj"
+  "CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/bolas.cpp.obj"
+  "CMakeFiles/interfaz_proyecto_1_datos_2.dir/interfaz/ventana.cpp.obj"
+  "CMakeFiles/interfaz_proyecto_1_datos_2.dir/main.cpp.obj"
+  "interfaz_proyecto_1_datos_2.exe"
+  "interfaz_proyecto_1_datos_2.exe.manifest"
+  "interfaz_proyecto_1_datos_2.lib"
   "interfaz_proyecto_1_datos_2.pdb"
 )
 
